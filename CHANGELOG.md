@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.2...v1.0.3) (2023-12-17)
+
+
+### Bug Fixes
+
+* Added logging ([d4ff72a](https://github.com/kapetacom/sdk-nodejs-redis/commit/d4ff72a54c88eb3dac083d35c4f8a8f5f9bbfda2))
+
 ## [1.0.2](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.1...v1.0.2) (2023-12-17)
 
 
