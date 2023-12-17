@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.1...v1.0.2) (2023-12-17)
+
+
+### Bug Fixes
+
+* Simplify types ([835dfd1](https://github.com/kapetacom/sdk-nodejs-redis/commit/835dfd1ad62aebb352e78944b99b2edb05f316bd))
+
 ## [1.0.1](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.0...v1.0.1) (2023-12-17)
 
 
