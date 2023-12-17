@@ -4,14 +4,14 @@
  */
 
 import Config, { ConfigProvider } from '@kapeta/sdk-config';
-import {createClient} from 'redis';
+import {createClient, RedisClientType} from 'redis';
 
-export type RedisClientType = ReturnType<typeof createClient>
+const RESOURCE_TYPE = 'kapeta/resource-type-redis';
+const PORT_TYPE = 'redis';
 
-export const RESOURCE_TYPE = 'kapeta/resource-type-redis';
-export const PORT_TYPE = 'redis';
+export type RedisClient = RedisClientType;
 
-export const createRedisClient = async (config: ConfigProvider, resourceName: string):Promise<RedisClientType> => {
+export const createRedisClient = async (config: ConfigProvider, resourceName: string):Promise<RedisClient> => {
     const redisInfo = await config.getResourceInfo(RESOURCE_TYPE, PORT_TYPE, resourceName);
     if (!redisInfo) {
         throw new Error(`Resource ${resourceName} not found`);
@@ -29,7 +29,7 @@ export const createRedisClient = async (config: ConfigProvider, resourceName: st
 
     url += `${redisInfo.host}:${redisInfo.port}`;
 
-    const client = createClient({ url });
+    const client:RedisClient = createClient({ url });
 
     await client.connect();
 
@@ -38,7 +38,7 @@ export const createRedisClient = async (config: ConfigProvider, resourceName: st
 
 export class RedisDB {
     private readonly resourceName: string;
-    private _client: RedisClientType|undefined;
+    private _client: RedisClient|undefined;
 
     constructor(resourceName:string) {
         this.resourceName = resourceName;
@@ -51,7 +51,7 @@ export class RedisDB {
         this._client = await createRedisClient(provider, this.resourceName);
     }
 
-    public client():RedisClientType {
+    public client():RedisClient {
         if (!this._client) {
             throw new Error('RedisDB not ready');
         }
