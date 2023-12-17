@@ -76,13 +76,12 @@
             ]
         ]
     },
-    "dependencies": {
-        "redis": "^4.6.11"
-    },
     "peerDependencies": {
-        "@kapeta/sdk-config": "^2"
+        "@kapeta/sdk-config": "^2",
+        "redis": "^4"
     },
     "devDependencies": {
+        "redis": "^4",
         "@kapeta/eslint-config": "^0.6.0",
         "@kapeta/prettier-config": "^0.6.0",
         "@kapeta/sdk-config": "^2",
