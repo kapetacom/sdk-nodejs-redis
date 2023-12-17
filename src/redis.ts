@@ -27,11 +27,22 @@ export const createRedisClient = async (config: ConfigProvider, resourceName: st
         url += '@';
     }
 
-    url += `${redisInfo.host}:${redisInfo.port}`;
+    const redisHostname = `${redisInfo.host}:${redisInfo.port}`;
+
+    url += `${redisHostname}`;
+
+    console.log(`Connecting to Redis: ${redisHostname}`);
 
     const client:RedisClient = createClient({ url });
 
-    await client.connect();
+    try {
+        await client.connect();
+
+        console.log(`Connected to Redis: ${redisHostname}`);
+    } catch (e) {
+        console.error(`Failed to connect to Redis: ${redisHostname}`, e);
+        throw e;
+    }
 
     return client;
 };
