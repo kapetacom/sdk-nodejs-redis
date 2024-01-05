@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.3...v1.1.0) (2024-01-05)
+
+
+### Features
+
+* Add options argument when creating redis ([fde720d](https://github.com/kapetacom/sdk-nodejs-redis/commit/fde720dad165abcf1ba61c49e713955dc2352db7))
+
 ## [1.0.3](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.2...v1.0.3) (2023-12-17)
 
 
