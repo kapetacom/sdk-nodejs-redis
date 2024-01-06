@@ -19,6 +19,8 @@ export const createRedisClient = async (config: ConfigProvider, resourceName: st
         throw new Error(`Resource ${resourceName} not found`);
     }
 
+    const redisOptions = redisInfo.options ?? {};
+
     let url = 'redis://';
     if (redisInfo.credentials?.username) {
         url += encodeURIComponent(redisInfo.credentials.username);
@@ -35,7 +37,7 @@ export const createRedisClient = async (config: ConfigProvider, resourceName: st
 
     console.log(`Connecting to Redis: ${redisHostname}`);
 
-    const client:RedisClient = createClient({ ...options, url }) as RedisClient;
+    const client:RedisClient = createClient({ ...options, ...redisOptions, url }) as RedisClient;
 
     try {
         await client.connect();
