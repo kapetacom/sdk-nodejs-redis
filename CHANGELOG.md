@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.1.0...v1.1.1) (2024-01-06)
+
+
+### Bug Fixes
+
+* Also include options from resource ([bc67ba1](https://github.com/kapetacom/sdk-nodejs-redis/commit/bc67ba1056c39def5ca86da29428ce4fac015de3))
+
 # [1.1.0](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.0.3...v1.1.0) (2024-01-05)
 
 
