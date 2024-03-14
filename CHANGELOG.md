@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.1.1...v1.1.2) (2024-03-14)
+
+
+### Bug Fixes
+
+* Remove non-existing bin ref ([#3](https://github.com/kapetacom/sdk-nodejs-redis/issues/3)) ([163f5e7](https://github.com/kapetacom/sdk-nodejs-redis/commit/163f5e7fa18cd880bd3d1b664bb4476dba1bc83e))
+
 ## [1.1.1](https://github.com/kapetacom/sdk-nodejs-redis/compare/v1.1.0...v1.1.1) (2024-01-06)
 
 
